@@ -1,0 +1,78 @@
+﻿@model WorldOfWarshipsAcademy.Models.HeavyCruisers
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>HeavyCruisers</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tier)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tier)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShipName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShipName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Survivability)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Survivability)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Artillery)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Artillery)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Torpedoes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Torpedoes)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AaDefense)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AaDefense)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Maneuverability)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Maneuverability)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Concealment)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Concealment)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AbbrevNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AbbrevNavigation.Abbreviation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NationNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NationNavigation.NationAbbrev)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Abbrev">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

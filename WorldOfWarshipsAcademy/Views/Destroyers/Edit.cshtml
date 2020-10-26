@@ -1,0 +1,74 @@
+﻿@model WorldOfWarshipsAcademy.Models.Destroyers
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Destroyers</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Abbrev" />
+            <div class="form-group">
+                <label asp-for="Nation" class="control-label"></label>
+                <select asp-for="Nation" class="form-control" asp-items="ViewBag.Nation"></select>
+                <span asp-validation-for="Nation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tier" class="control-label"></label>
+                <input asp-for="Tier" class="form-control" />
+                <span asp-validation-for="Tier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ShipName" class="control-label"></label>
+                <input asp-for="ShipName" class="form-control" />
+                <span asp-validation-for="ShipName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survivability" class="control-label"></label>
+                <input asp-for="Survivability" class="form-control" />
+                <span asp-validation-for="Survivability" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Artillery" class="control-label"></label>
+                <input asp-for="Artillery" class="form-control" />
+                <span asp-validation-for="Artillery" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Torpedoes" class="control-label"></label>
+                <input asp-for="Torpedoes" class="form-control" />
+                <span asp-validation-for="Torpedoes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AaDefense" class="control-label"></label>
+                <input asp-for="AaDefense" class="form-control" />
+                <span asp-validation-for="AaDefense" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Maneuverability" class="control-label"></label>
+                <input asp-for="Maneuverability" class="form-control" />
+                <span asp-validation-for="Maneuverability" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Concealment" class="control-label"></label>
+                <input asp-for="Concealment" class="form-control" />
+                <span asp-validation-for="Concealment" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

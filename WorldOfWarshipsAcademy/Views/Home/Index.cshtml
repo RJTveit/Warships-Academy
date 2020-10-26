@@ -1,0 +1,207 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+body { background-image: url('https://miro.medium.com/max/1200/1*2eUGbqPEKciO7twv-mS3jQ.jpeg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%; }
+</style>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Warships Academy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/">Warships Academy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About">About</a>
+                    </li>                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h4 class="display-4 text-center"><strong>Classes</strong></h4>
+        </header>
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://wiki.gcdn.co/images/3/30/Wows-aircarrier.png" alt="">
+                    <div class="card-body">
+                        <a asp-action="Index" asp-controller="AircraftCarriers">Aircraft Carriers</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://wiki.gcdn.co/images/7/77/Wows-battleship.png" alt="">
+                    <div class="card-body">
+                        <a asp-action="Index" asp-controller="Battleships">Battleships</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://wiki.gcdn.co/images/6/60/Wows-cruiser.png" alt="">
+                    <div class="card-body">
+                        <a asp-action="Index" asp-controller="HeavyCruisers">Heavy Cruisers</a>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://wiki.gcdn.co/images/6/60/Wows-cruiser.png" alt="">
+                    <div class="card-body">                           
+                        <a asp-action="Index" asp-controller="LightCruisers">Light Cruisers</a>
+                    </div>
+                </div>
+            </div>                            
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://wiki.gcdn.co/images/8/85/Wows-destroyer.png" alt="">
+                    <div class="card-body">
+                        <a asp-action="Index" asp-controller="Destroyers">Destroyers</a>
+                    </div>
+                </div>
+            </div>            
+        </div>
+   </div>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h4 class="display-3 text-center"><strong>Nations</strong></h4>
+        </header>
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://cdn.countryflags.com/thumbs/united-states-of-america/flag-wave-250.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">United States Navy</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://cdn.countryflags.com/thumbs/japan/flag-wave-250.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Imperial Japanese Navy</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://cdn.countryflags.com/thumbs/germany/flag-wave-250.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">German Kriegsmarine</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-wave-250.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">British Royal Navy</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://cdn.countryflags.com/thumbs/russia/flag-wave-250.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Russian Navy</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://www.seekpng.com/png/detail/66-668689_page-under-construction-icon.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">France</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://www.seekpng.com/png/detail/66-668689_page-under-construction-icon.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Pan European Navys</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="https://www.seekpng.com/png/detail/66-668689_page-under-construction-icon.png" alt="">
+                    <div class="card-body">
+                        <h4 class="card-title">Italian Regiana Marina</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Warships Academy 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
