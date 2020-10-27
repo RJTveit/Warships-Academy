@@ -35,7 +35,7 @@ namespace WorldOfWarshipsAcademy.Models
         {
             modelBuilder.Entity<AircraftCarriers>(entity =>
             {
-                entity.HasKey(e => e.Abbrev);
+                
 
                 entity.ToTable("Aircraft Carriers");
 
@@ -72,7 +72,7 @@ namespace WorldOfWarshipsAcademy.Models
 
             modelBuilder.Entity<Battleships>(entity =>
             {
-                entity.HasKey(e => e.Abbrev);
+                
 
                 entity.Property(e => e.Abbrev)
                     .HasMaxLength(4)

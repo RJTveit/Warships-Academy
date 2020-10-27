@@ -5,6 +5,7 @@ namespace WorldOfWarshipsAcademy.Models
 {
     public partial class AircraftCarriers
     {
+        public int Id { get; set; }
         public string Abbrev { get; set; }
         public string Nation { get; set; }
         public string Tier { get; set; }
