@@ -13,6 +13,7 @@
 - [x] Test Cases
 
 ## Concept
+[(back to top)](#table-of-contents)
 
 Created as the final project in the Microsoft Software and Systems Academy. My idea for the application came for my love of the Wargaming game World of Warships.
 The Concept is to provide the player base a quick reference guide, to allow users to view and compare stats.
@@ -24,6 +25,7 @@ The Concept is to provide the player base a quick reference guide, to allow user
 ## Database Draft
 
 ## UI/UX Design
+[(back to top)](#table-of-contents)
 
 ### Homepage ![homepage](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademyHomepage.png?raw=true)
 
@@ -36,6 +38,7 @@ The Concept is to provide the player base a quick reference guide, to allow user
 ## Use Case Diagram
 
 ## Requirements
+[(back to top)](#table-of-contents)
 
 | ID | Requirements | Test ID |
 -----|--------------|----------
@@ -50,6 +53,7 @@ The Concept is to provide the player base a quick reference guide, to allow user
 4.0.1 | User shall be able to view captain skills and their descriptions in a seperate table. | T.4.1 |
 
 ## Test Cases
+[(back to top)](#table-of-contents)
 
 | Test ID | Req. ID | Test Desc. | Test Status | Date Passed |
 ----------|---------|------------|-------------|--------------
