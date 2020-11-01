@@ -33,15 +33,15 @@ The Concept is to provide the player base a quick reference guide, to allow user
 
 | ID | Requirements | Test ID |
 -----|--------------|----------
-1.0.1 | System shall display Nations and Classes on the homepage.
-1.0.2 | User shall be able to navigate to tables by using the Nation/Class links.
-1.0.3 | User shall be able to view tables displayed in order by tier.
-2.0.1 | User shall be able to search for a ship using a search bar.
-2.0.2 | Search bar will display an error if nothing is returned from the query.
-2.0.3 | Search results will be listed in a table format with most relevant results first.
-3.0.1 | User shall be able to select "Details" and view more in-depth information on each ship.
-3.0.2 | User shall be able to create a "build" by adding on ship specific equipment allowing them to view potential in-game stat changes.
-4.0.1 | User shall be able to view captain skills and their descriptions in a seperate table.
+1.0.1 | System shall display Nations and Classes on the homepage. | T .1.1 |
+1.0.2 | User shall be able to navigate to tables by using the Nation/Class links. | T.1.2 |
+1.0.3 | User shall be able to view tables displayed in order by tier. | T.1.3 |
+2.0.1 | User shall be able to search for a ship using a search bar. |T.2.1 |
+2.0.2 | Search bar will display an error if nothing is returned from the query. | T.2.2 |
+2.0.3 | Search results will be listed in a table format with most relevant results first. | T.2.3 |
+3.0.1 | User shall be able to select "Details" and view more in-depth information on each ship. | T.3.1 |
+3.0.2 | User shall be able to create a "build" by adding on ship specific equipment allowing them to view potential in-game stat changes. | T.3.2 |
+4.0.1 | User shall be able to view captain skills and their descriptions in a seperate table. | T.4.1 |
 
 ## Test Cases
 
