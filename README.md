@@ -6,8 +6,8 @@
 - [x] Conception Presentation
 - [ ] Database Concept Design
 - [x] Database Draft
-- [ ] UI/UX Design
-- [x] User Stories
+- [x] UI/UX Design
+- [ ] User Stories
 - [ ] Use Case Diagram
 - [x] Requirements
 - [x] Test Cases
@@ -24,6 +24,12 @@ The Concept is to provide the player base a quick reference guide, to allow user
 ## Database Draft
 
 ## UI/UX Design
+
+### Homepage ![homepage](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademyHomepage.png?raw=true)
+
+### Ship Display Page ![display](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademyShipPage.png?raw=true)
+
+### Split Line Page ![splitchoice](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademySplitMenu.png?raw=true)
 
 ## User Stories
 
