@@ -5,6 +5,7 @@ namespace WorldOfWarshipsAcademy.Models
 {
     public partial class Destroyers
     {
+        public int Id { get; set; }
         public string Abbrev { get; set; }
         public string Nation { get; set; }
         public string Tier { get; set; }
@@ -15,6 +16,7 @@ namespace WorldOfWarshipsAcademy.Models
         public string AaDefense { get; set; }
         public int? Maneuverability { get; set; }
         public int? Concealment { get; set; }
+        public string ImagePath { get; set; }
 
         public virtual ShipClasses AbbrevNavigation { get; set; }
         public virtual ShipNations NationNavigation { get; set; }

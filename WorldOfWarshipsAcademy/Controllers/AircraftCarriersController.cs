@@ -19,33 +19,23 @@ namespace WorldOfWarshipsAcademy.Controllers
         }
 
         // GET: AircraftCarriers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-           // var worldOfWarshipsDbContext = _context.AircraftCarriers
-           //     .Include(a => a.AbbrevNavigation)
-           //     .Include(a => a.NationNavigation);
 
-            //var carriers = await worldOfWarshipsDbContext.ToListAsync();
+            //var worldOfWarshipsDbContext = _context.AircraftCarriers.Include(b => b.AbbrevNavigation).Include(b => b.NationNavigation);
+            //return View(await worldOfWarshipsDbContext.ToListAsync());
 
-            var carriers = from AircraftCarriers in _context.AircraftCarriers
-                           select AircraftCarriers;
+            var carriers = from ac in _context.AircraftCarriers
+                           select ac;
 
-            if (carriers == null)
+            if (!String.IsNullOrEmpty(searchString))
             {
-                return NotFound();
+                carriers = carriers.Where(s => s.ShipName.Contains(searchString));
             }
 
-            //var aircraftCarriers = await _context.AircraftCarriers
-            //    .Include(a => a.AbbrevNavigation)
-            //    .Include(a => a.NationNavigation)
-            //    .FirstOrDefaultAsync(m => m.Abbrev == id);
+            return View(await carriers.ToListAsync());
 
-            //if (aircraftCarriers == null)
-            //{
-            //    return NotFound();
-            //}
-
-            return View(carriers);
+           
         }
 
         // GET: AircraftCarriers/Details/5

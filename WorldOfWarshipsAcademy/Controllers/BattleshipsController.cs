@@ -19,10 +19,20 @@ namespace WorldOfWarshipsAcademy.Controllers
         }
 
         // GET: Battleships
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var worldOfWarshipsDbContext = _context.Battleships.Include(b => b.AbbrevNavigation).Include(b => b.NationNavigation);
-            return View(await worldOfWarshipsDbContext.ToListAsync());
+            //var worldOfWarshipsDbContext = _context.Battleships.Include(b => b.AbbrevNavigation).Include(b => b.NationNavigation);
+            //return View(await worldOfWarshipsDbContext.ToListAsync());
+
+            var battleship = from bb in _context.Battleships
+                           select bb;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                battleship = battleship.Where(s => s.ShipName.Contains(searchString));
+            }
+
+            return View(await battleship.ToListAsync());
         }
 
         // GET: Battleships/Details/5

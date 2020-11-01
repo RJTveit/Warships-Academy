@@ -19,10 +19,20 @@ namespace WorldOfWarshipsAcademy.Controllers
         }
 
         // GET: HeavyCruisers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var worldOfWarshipsDbContext = _context.HeavyCruisers.Include(h => h.AbbrevNavigation).Include(h => h.NationNavigation);
-            return View(await worldOfWarshipsDbContext.ToListAsync());
+            //var worldOfWarshipsDbContext = _context.HeavyCruisers.Include(h => h.AbbrevNavigation).Include(h => h.NationNavigation);
+            //return View(await worldOfWarshipsDbContext.ToListAsync());
+
+            var hCruisers = from ca in _context.HeavyCruisers
+                            select ca;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                hCruisers = hCruisers.Where(s => s.ShipName.Contains(searchString));
+            }
+
+            return View(await hCruisers.ToListAsync());
         }
 
         // GET: HeavyCruisers/Details/5

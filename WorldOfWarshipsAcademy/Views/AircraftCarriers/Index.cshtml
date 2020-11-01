@@ -4,14 +4,15 @@
     ViewData["Title"] = "Index";
 }
 
-@**<style>
+<style>
     body {
         background-image: url('https://miro.medium.com/max/1200/1*2eUGbqPEKciO7twv-mS3jQ.jpeg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 100% 100%;
     }
-</style>*@
+</style>
+
 <head>
 
     <meta charset="utf-8">
@@ -36,6 +37,12 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <form asp-controller="AircraftCarriers" asp-action="Index">
+            <p>
+                SEARCH: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
@@ -52,93 +59,100 @@
     </div>
 </nav>
 
-<!-- Page Content -->
-<div class="container">
 
-    <!-- Jumbotron Header -->
-    <header class="jumbotron my-4">
-        <h4 class="display-4 text-center"><strong>Aircraft Carriers</strong></h4>
-    </header>
-</div>
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Tier)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ShipName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Survivability)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Aircraft)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Artillery)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AaDefense)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Maneuverability)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Concealment)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.AbbrevNavigation)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.NationNavigation)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model)
-            {
+<body class="align-content-center">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h4 class="display-4 text-center"><strong>Aircraft Carriers</strong></h4>
+        </header>
+        <table class="table">
+            <thead class="jumbotron my-4 text-center">
                 <tr>
-                    <td>
-                        @item.Tier
-                    </td>
-                    <td>
-                        @item.ShipName
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Survivability)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Aircraft)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Artillery)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AaDefense)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Maneuverability)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Concealment)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.AbbrevNavigation.Abbreviation)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.NationNavigation.NationAbbrev)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Abbrev">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Abbrev">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Abbrev">Delete</a>
-                    </td>
+                    <th class="align-content-center">
+                        Image
+                    </th>
+                    <th class="align-content-center">
+                        Tier
+                    </th>
+                    <th class="align-content-center">
+                        Ship Name
+                    </th>
+                    <th class="align-content-center">
+                        Survivability
+                    </th>
+                    <th class="align-content-center">
+                        Aircraft
+                    </th>
+                    <th class="align-content-center">
+                        Artillery
+                    </th>
+                    <th class="align-content-center">
+                        AA Defense
+                    </th>
+                    <th class="align-content-center">
+                        Maneuverability
+                    </th>
+                    <th class="align-content-center">
+                        Concealment
+                    </th>
+                    <th></th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody class="jumbotron my-4 text-center">
+                @foreach (var item in Model)
+                {
+                    <container>
+                        <tr>
+                            <td class="align-content-center">
+                                <img src="@Html.DisplayFor(modelItem => item.ImagePath)" height="75" />
+                            </td>
+                            <td class="align-content-center">
+                                @item.Tier
+                            </td>
+                            <td class="align-content-center">
+                                @item.ShipName
+                            </td>
+                            <td class="align-content-center">
+                                @Html.DisplayFor(modelItem => item.Survivability)
+                            </td>
+                            <td class="align-content-center">
+                                @Html.DisplayFor(modelItem => item.Aircraft)
+                            </td>
+                            <td class="align-content-center">
+                                @Html.DisplayFor(modelItem => item.Artillery)
+                            </td>
+                            <td class="align-content-center">
+                                @Html.DisplayFor(modelItem => item.AaDefense)
+                            </td>
+                            <td class="align-content-center">
+                                @Html.DisplayFor(modelItem => item.Maneuverability)
+                            </td>
+                            <td class="align-content-center">
+                                @Html.DisplayFor(modelItem => item.Concealment)
+                            </td>
+                            <td class="align-content-lg-center">
+                                <a asp-action="Details" asp-route-id="@item.Abbrev">Details</a>
+                            </td>
+                        </tr>
+                    </container>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Warships Academy 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>

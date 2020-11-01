@@ -19,10 +19,20 @@ namespace WorldOfWarshipsAcademy.Controllers
         }
 
         // GET: Destroyers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var worldOfWarshipsDbContext = _context.Destroyers.Include(d => d.AbbrevNavigation).Include(d => d.NationNavigation);
-            return View(await worldOfWarshipsDbContext.ToListAsync());
+            //var worldOfWarshipsDbContext = _context.Destroyers.Include(d => d.AbbrevNavigation).Include(d => d.NationNavigation);
+            //return View(await worldOfWarshipsDbContext.ToListAsync());
+
+            var destroyer = from dd in _context.Destroyers
+                             select dd;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                destroyer = destroyer.Where(s => s.ShipName.Contains(searchString));
+            }
+
+            return View(await destroyer.ToListAsync());
         }
 
         // GET: Destroyers/Details/5

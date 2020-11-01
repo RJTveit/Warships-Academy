@@ -72,7 +72,7 @@ namespace WorldOfWarshipsAcademy.Models
 
             modelBuilder.Entity<Battleships>(entity =>
             {
-                
+                entity.ToTable("Battleships");
 
                 entity.Property(e => e.Abbrev)
                     .HasMaxLength(4)
@@ -114,10 +114,10 @@ namespace WorldOfWarshipsAcademy.Models
 
             modelBuilder.Entity<Destroyers>(entity =>
             {
-                entity.HasKey(e => e.Abbrev);
+                entity.ToTable("Destroyers");
 
                 entity.HasIndex(e => e.Abbrev)
-                    .HasName("IX_Destroyers");
+                    .HasName("Destroyers");
 
                 entity.Property(e => e.Abbrev)
                     .HasMaxLength(4)
@@ -133,6 +133,7 @@ namespace WorldOfWarshipsAcademy.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.ShipName)
+                    .HasColumnName("Ship Name")
                     .HasMaxLength(60)
                     .IsUnicode(false);
 
@@ -158,7 +159,7 @@ namespace WorldOfWarshipsAcademy.Models
 
             modelBuilder.Entity<HeavyCruisers>(entity =>
             {
-                entity.HasKey(e => e.Abbrev);
+                
 
                 entity.ToTable("Heavy Cruisers");
 
@@ -202,7 +203,7 @@ namespace WorldOfWarshipsAcademy.Models
 
             modelBuilder.Entity<LightCruisers>(entity =>
             {
-                entity.HasKey(e => e.Abbrev);
+                
 
                 entity.ToTable("Light Cruisers");
 

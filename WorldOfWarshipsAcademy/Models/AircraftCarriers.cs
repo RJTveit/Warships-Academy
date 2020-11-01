@@ -16,6 +16,7 @@ namespace WorldOfWarshipsAcademy.Models
         public int? AaDefense { get; set; }
         public int? Maneuverability { get; set; }
         public int? Concealment { get; set; }
+        public string ImagePath { get; set; }
 
         public virtual ShipClasses AbbrevNavigation { get; set; }
         public virtual ShipNations NationNavigation { get; set; }

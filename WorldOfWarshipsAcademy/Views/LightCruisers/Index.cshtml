@@ -4,86 +4,146 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Light Cruisers</h1>
+<style>
+    body {
+        background-image: url('https://miro.medium.com/max/1200/1*2eUGbqPEKciO7twv-mS3jQ.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Tier)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ShipName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Survivability)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Artillery)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Torpedoes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AaDefense)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Maneuverability)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Concealment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.AbbrevNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NationNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Tier)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Survivability)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Artillery)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Torpedoes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AaDefense)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Maneuverability)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Concealment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AbbrevNavigation.Abbreviation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NationNavigation.NationAbbrev)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Abbrev">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Abbrev">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Abbrev">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Warships Academy</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+
+</head>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">Warships Academy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <form asp-controller="LightCruisers" asp-action="Index">
+            <p>
+                SEARCH: <input type="text" name="SearchString">
+                <input type="submit" value="Filter" />
+            </p>
+        </form>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About">About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body class="align-content-center">
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron my-4">
+            <h4 class="display-4 text-center"><strong>Light Cruisers</strong></h4>
+        </header>
+        <table class="table">
+            <thead class="jumbotron my-4 text-center">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Tier)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ShipName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Survivability)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Artillery)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Torpedoes)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.AaDefense)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Maneuverability)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Concealment)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="jumbotron my-4 text-center">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tier)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ShipName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Survivability)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Artillery)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Torpedoes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AaDefense)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Maneuverability)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Concealment)
+                        </td>                        
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.Abbrev">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Warships Academy 2020</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>

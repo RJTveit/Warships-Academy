@@ -5,7 +5,7 @@ CREATE TABLE Destroyers
 	Abbrev CHAR(4),
 	Nation VARCHAR(4),
 	Tier VARCHAR(4),
-	ShipName VARCHAR(60),
+	[ship name] VARCHAR(60),
 	Survivability INT,
 	Artillery INT,
 	Torpedoes VARCHAR(4),
@@ -35,6 +35,72 @@ VALUES
 ('https://wiki.gcdn.co/images/5/58/Ship_PBSD105_Acasta.png','DD', 'RN', 'V', 'Acasta', 16, 23, 13, 8, 64, 87),('https://wiki.gcdn.co/images/1/12/Ship_PBSD106_Icarus.png','DD', 'RN', 'VI', 'Icarus', 18, 24, 13, 6, 65, 86),('https://wiki.gcdn.co/images/0/0d/Ship_PBSD107_Jervis.png','DD', 'RN', 'VII', 'Jervis', 22, 25, 20, 12, 65, 84),
 ('https://wiki.gcdn.co/images/5/5b/Ship_PBSD108_Lightning.png','DD', 'RN', 'VIII', 'Lightning', 28, 30, 20, 28, 67, 89),('https://wiki.gcdn.co/images/a/ab/Ship_PBSD109_Jutland.png','DD', 'RN', 'IX', 'Jutland', 28, 20, 24, 44, 60, 83),('https://wiki.gcdn.co/images/2/2a/Ship_PBSD110_Daring.png','DD', 'RN', 'X', 'Daring', 40, 22, 26, 52, 67, 90)
 
+ALTER TABLE [Destroyers]
+ADD Id INT;
+
+update [Destroyers] set Id=1 where [ship name] like 'Sampson'
+update [Destroyers] set Id=2 where [ship name] like 'Wickes'
+update [Destroyers] set Id=3 where [ship name] like 'Clemson'
+update [Destroyers] set Id=4 where [ship name] like 'Nicholas'
+update [Destroyers] set Id=5 where [ship name] like 'Farragut'
+update [Destroyers] set Id=6 where [ship name] like 'Mahan'
+update [Destroyers] set Id=7 where [ship name] like 'Benson'
+update [Destroyers] set Id=8 where [ship name] like 'Fletcher'
+update [Destroyers] set Id=9 where [ship name] like 'Gearing'
+update [Destroyers] set Id=10 where [ship name] like 'Umikaze'
+update [Destroyers] set Id=11 where [ship name] like 'Wakatake'
+update [Destroyers] set Id=12 where [ship name] like 'Isokaze'
+update [Destroyers] set Id=13 where [ship name] like 'Mutsuki'
+update [Destroyers] set Id=14 where [ship name] like 'Minekaze'
+update [Destroyers] set Id=15 where [ship name] like 'Fubuki'
+update [Destroyers] set Id=16 where [ship name] like 'Hatsuharu'
+update [Destroyers] set Id=17 where [ship name] like 'Akatsuki'
+update [Destroyers] set Id=18 where [ship name] like 'Shiratsuyu'
+update [Destroyers] set Id=19 where [ship name] like 'Kagero'
+update [Destroyers] set Id=20 where [ship name] like 'Akizuki'
+update [Destroyers] set Id=21 where [ship name] like 'Yugumo'
+update [Destroyers] set Id=22 where [ship name] like 'Kitakaze'
+update [Destroyers] set Id=23 where [ship name] like 'Shimakaze'
+update [Destroyers] set Id=24 where [ship name] like 'Harugumo'
+update [Destroyers] set Id=25 where [ship name] like 'V-25'
+update [Destroyers] set Id=26 where [ship name] like 'G-101'
+update [Destroyers] set Id=27 where [ship name] like 'V-170'
+update [Destroyers] set Id=28 where [ship name] like 'T-22'
+update [Destroyers] set Id=29 where [ship name] like 'Gaede'
+update [Destroyers] set Id=30 where [ship name] like 'Mass'
+update [Destroyers] set Id=31 where [ship name] like 'Z-23'
+update [Destroyers] set Id=32 where [ship name] like 'Z-46'
+update [Destroyers] set Id=33 where [ship name] like 'Z-52'
+update [Destroyers] set Id=34 where [ship name] like 'Storozhevoi'
+update [Destroyers] set Id=35 where [ship name] like 'Derzki'
+update [Destroyers] set Id=36 where [ship name] like 'Izyaslav'
+update [Destroyers] set Id=37 where [ship name] like 'Podvoisky'
+update [Destroyers] set Id=38 where [ship name] like 'Gnevny'
+update [Destroyers] set Id=39 where [ship name] like 'Minsk'
+update [Destroyers] set Id=40 where [ship name] like 'Kiev'
+update [Destroyers] set Id=41 where [ship name] like 'Ognevoi'
+update [Destroyers] set Id=42 where [ship name] like 'Tashkent'
+update [Destroyers] set Id=43 where [ship name] like 'Udaloi'
+update [Destroyers] set Id=44 where [ship name] like 'Khabarovsk'
+update [Destroyers] set Id=45 where [ship name] like 'Grozovoi'
+update [Destroyers] set Id=46 where [ship name] like 'Medea'
+update [Destroyers] set Id=47 where [ship name] like 'Valkyrie'
+update [Destroyers] set Id=48 where [ship name] like 'Wakeful'
+update [Destroyers] set Id=49 where [ship name] like 'Acasta'
+update [Destroyers] set Id=50 where [ship name] like 'Icarus'
+update [Destroyers] set Id=51 where [ship name] like 'Jervis'
+update [Destroyers] set Id=52 where [ship name] like 'Lightning'
+update [Destroyers] set Id=53 where [ship name] like 'Jutland'
+update [Destroyers] set Id=54 where [ship name] like 'Daring'
+
+ALTER TABLE [Destroyers]
+ALTER COLUMN ID INT NOT NULL;
+
+ALTER TABLE [Destroyers]
+ADD PRIMARY KEY ([Id]);
+
+-------------------------------------------------------------------------------------------------------------------------------
+
 DROP TABLE IF EXISTS [Heavy Cruisers]
 CREATE TABLE [Heavy Cruisers]
 (
@@ -62,6 +128,43 @@ VALUES
 ('https://wiki.gcdn.co/images/8/8f/Ship_PBSC205_Hawkins.png','CA', 'RN', 'V', 'Hawkins', 36, 59, 13, 19, 46, 54),('https://wiki.gcdn.co/images/7/72/Ship_PBSC206_Devonshire.png','CA', 'RN', 'VI', 'Devonshire', 44, 66, 20, 48, 55, 63),('https://wiki.gcdn.co/images/0/0e/Ship_PBSC207_Surrey.png','CA', 'RN', 'VII', 'Surrey', 47, 67, 20, 58, 52, 62),
 ('https://wiki.gcdn.co/images/a/a6/Ship_PBSC208_Albemarle.png','CA', 'RN', 'VIII', 'Ablemarle', 58,68, 23, 75, 58, 60),('https://wiki.gcdn.co/images/e/e8/Ship_PBSC209_Drake.png','CA', 'RN', 'IX', 'Drake', 63, 85, 24, 73, 57, 55),('https://wiki.gcdn.co/images/8/88/Ship_PBSC210_Goliath.png','CA', 'RN', 'X', 'Goliath', 77, 88, 24, 82, 54, 59) 
 
+
+ALTER TABLE [Heavy Cruisers]
+ADD Id INT;
+
+update [Heavy Cruisers] set Id=1 where [ship name] like 'Pensacola'
+update [Heavy Cruisers] set Id=2 where [ship name] like 'New Orleans'
+update [Heavy Cruisers] set Id=3 where [ship name] like 'Baltimore'
+update [Heavy Cruisers] set Id=4 where [ship name] like 'Buffalo'
+update [Heavy Cruisers] set Id=5 where [ship name] like 'Des Moines'
+update [Heavy Cruisers] set Id=6 where [ship name] like 'Hashidate'
+update [Heavy Cruisers] set Id=7 where [ship name] like 'Chikuma'
+update [Heavy Cruisers] set Id=8 where [ship name] like 'Tenryu'
+update [Heavy Cruisers] set Id=9 where [ship name] like 'Kuma'
+update [Heavy Cruisers] set Id=10 where [ship name] like 'Furutaka'
+update [Heavy Cruisers] set Id=11 where [ship name] like 'Aoba'
+update [Heavy Cruisers] set Id=12 where [ship name] like 'Myoko'
+update [Heavy Cruisers] set Id=13 where [ship name] like 'Mogami'
+update [Heavy Cruisers] set Id=14 where [ship name] like 'Ibuki'
+update [Heavy Cruisers] set Id=15 where [ship name] like 'Zao'
+update [Heavy Cruisers] set Id=16 where [ship name] like 'Tallinn'
+update [Heavy Cruisers] set Id=17 where [ship name] like 'Riga'
+update [Heavy Cruisers] set Id=18 where [ship name] like 'Petropavlovsk'
+update [Heavy Cruisers] set Id=19 where [ship name] like 'Hawkins'
+update [Heavy Cruisers] set Id=20 where [ship name] like 'Devonshire'
+update [Heavy Cruisers] set Id=21 where [ship name] like 'Surrey'
+update [Heavy Cruisers] set Id=22 where [ship name] like 'Ablemarle'
+update [Heavy Cruisers] set Id=23 where [ship name] like 'Drake'
+update [Heavy Cruisers] set Id=24 where [ship name] like 'Goliath'
+
+ALTER TABLE [Heavy Cruisers]
+ALTER COLUMN ID INT NOT NULL;
+
+ALTER TABLE [Heavy Cruisers]
+ADD PRIMARY KEY ([Id]);
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
 DROP TABLE IF EXISTS [Light Cruisers]
 CREATE TABLE [Light Cruisers]
 (
@@ -80,7 +183,7 @@ CREATE TABLE [Light Cruisers]
 
 INSERT INTO [Light Cruisers]
 VALUES
-('https://wiki.gcdn.co/images/8/80/Ship_PASC001_Erie_1936.png','CL', 'USA', 'I', 'Erie', 4, 1, 0, 1, 35, 76),('https://wiki.gcdn.co/images/0/01/Ship_PASC002_Chester_1908.png','CL', 'USA', 'II', 'Chester', 17, 17, 0, 0, 41, 77),('https://wiki.gcdn.co/images/1/1c/Ship_PASC004_St_Louis_1906.png','CL', 'USA', 'III', 'St. Loius', 32, 36, 0, 0, 65, 63),('https://wiki.gcdn.co/images/d/d5/Ship_PASC024_Phoenix_1917.png','CL', 'USA', 'IV', 'Phoenix', 27, 35, 9, 6, 61, 53),
+('https://wiki.gcdn.co/images/8/80/Ship_PASC001_Erie_1936.png','CL', 'USA', 'I', 'Erie', 4, 1, 0, 1, 35, 76),('https://wiki.gcdn.co/images/0/01/Ship_PASC002_Chester_1908.png','CL', 'USA', 'II', 'Chester', 17, 17, 0, 0, 41, 77),('https://wiki.gcdn.co/images/1/1c/Ship_PASC004_St_Louis_1906.png','CL', 'USA', 'III', 'St. Louis', 32, 36, 0, 0, 65, 63),('https://wiki.gcdn.co/images/d/d5/Ship_PASC024_Phoenix_1917.png','CL', 'USA', 'IV', 'Phoenix', 27, 35, 9, 6, 61, 53),
 ('https://wiki.gcdn.co/images/4/4e/Ship_PASC005_Omaha_1923.png','CL', 'USA', 'V', 'Omaha', 30, 39, 17, 11, 59, 52),('https://wiki.gcdn.co/images/9/9c/Ship_PASC206_Dallas.png','CL', 'USA', 'VI', 'Dallas', 38, 50, 0, 54, 56, 58),('https://wiki.gcdn.co/images/7/79/Ship_PASC207_Helena.png','CL', 'USA', 'VII', 'Helena', 40, 50, 0, 54, 51, 57),('https://wiki.gcdn.co/images/c/cd/Ship_PASC208_Cleveland.png','CL', 'USA', 'VIII', 'Cleveland', 44, 54, 0, 72, 55, 69),
 ('https://wiki.gcdn.co/images/1/1c/Ship_PASC209_Seattle.png','CL', 'USA', 'IX', 'Seattle', 57, 50, 0, 82, 52, 51),('https://wiki.gcdn.co/images/3/37/Ship_PASC210_Worcester.png','CL', 'USA', 'X', 'Worcester', 63, 59, 0, 96, 58, 65),('https://wiki.gcdn.co/images/5/56/Ship_PRSC101_Orlan.png','CL', 'RUS', 'I', 'Orlan', 4, 1, 0, 1, 46, 79),('https://wiki.gcdn.co/images/b/be/Ship_PRSC102_Novik.png','CL', 'RUS', 'II', 'Novik', 15, 13, 0, 2, 44, 76),  
 ('https://wiki.gcdn.co/images/2/20/Ship_PRSC103_Bogatyr.png','CL', 'RUS', 'III', 'Bogatyr', 24, 24, 0, 0, 39, 68),('https://wiki.gcdn.co/images/c/c1/Ship_PRSC104_Svetlana.png','CL', 'RUS', 'IV', 'Svietlana', 28, 24, 15, 6, 47, 69),('https://wiki.gcdn.co/images/f/f9/Ship_PRSC215_Kotovsky.png','CL', 'RUS', 'V', 'Kotovsky', 33, 47, 12, 26, 59, 56),('https://wiki.gcdn.co/images/d/d1/Ship_PRSC106_Pr_94_Budeny.png','CL', 'RUS', 'VI', 'Budyonny', 40, 53, 15, 43, 61, 53),
@@ -90,6 +193,58 @@ VALUES
 ('https://wiki.gcdn.co/images/2/2e/Ship_PGSC110_Hindenburg.png','CL', 'KM', 'X', 'Hindenburg', 70, 83, 32, 84, 48, 45),('https://wiki.gcdn.co/images/f/f6/Ship_PBSC101_Black_Swan.png','CL', 'RN', 'I', 'Black Swan', 6, 1, 0, 2, 33, 87),('https://wiki.gcdn.co/images/e/e7/Ship_PBSC102_Weymouth.png','CL', 'RN', 'II', 'Weymouth', 22, 18, 0, 6, 44, 75), ('https://wiki.gcdn.co/images/b/b6/Ship_PBSC103_Caledon.png','CL', 'RN', 'III', 'Caldeon', 23, 20, 15, 9, 50, 70),
 ('https://wiki.gcdn.co/images/3/3e/Ship_PBSC104_Danae.png','CL', 'RN', 'IV', 'Danae', 24, 20, 18, 9, 50, 67),('https://wiki.gcdn.co/images/9/92/Ship_PBSC105_Emerald.png','CL', 'RN', 'V', 'Emerald', 31, 26, 22, 15, 53, 66),('https://wiki.gcdn.co/images/1/11/Ship_PBSC106_Leander.png','CL', 'RN', 'VI', 'Leander', 38, 33, 20, 46, 55, 65),('https://wiki.gcdn.co/images/6/6b/Ship_PBSC107_Fiji.png','CL', 'RN', 'VII', 'Fiji', 43, 34, 17, 58, 59, 60),
 ('https://wiki.gcdn.co/images/6/69/Ship_PBSC108_Edinburgh.png','CL', 'RN', 'VIII', 'Edinburgh', 50, 34, 20, 69, 54, 70),('https://wiki.gcdn.co/images/b/be/Ship_PBSC109_Neptune.png','CL', 'RN', 'IX', 'Neptune', 55, 38, 45, 96, 50, 47),('https://wiki.gcdn.co/images/1/19/Ship_PBSC110_Minotaur.png','CL', 'RN', 'X', 'Minotaur', 61, 37, 49, 97, 59, 68) 
+
+ALTER TABLE [Light Cruisers]
+ADD Id INT;
+
+update [Light Cruisers] set Id=1 where [ship name] like 'Erie'
+update [Light Cruisers] set Id=2 where [ship name] like 'Chester'
+update [Light Cruisers] set Id=3 where [ship name] like 'St. Louis'
+update [Light Cruisers] set Id=4 where [ship name] like 'Phoenix'
+update [Light Cruisers] set Id=5 where [ship name] like 'Omaha'
+update [Light Cruisers] set Id=6 where [ship name] like 'Dallas'
+update [Light Cruisers] set Id=7 where [ship name] like 'Helena'
+update [Light Cruisers] set Id=8 where [ship name] like 'Cleveland'
+update [Light Cruisers] set Id=9 where [ship name] like 'Seattle'
+update [Light Cruisers] set Id=10 where [ship name] like 'Worcester'
+update [Light Cruisers] set Id=11 where [ship name] like 'Orlan'
+update [Light Cruisers] set Id=12 where [ship name] like 'Novik'
+update [Light Cruisers] set Id=13 where [ship name] like 'Bogatyr'
+update [Light Cruisers] set Id=14 where [ship name] like 'Svietlana'
+update [Light Cruisers] set Id=15 where [ship name] like 'Kotovsky'
+update [Light Cruisers] set Id=16 where [ship name] like 'Budyonny'
+update [Light Cruisers] set Id=17 where [ship name] like 'Schors'
+update [Light Cruisers] set Id=18 where [ship name] like 'Chapayev'
+update [Light Cruisers] set Id=19 where [ship name] like 'Dimitri Donskoi'
+update [Light Cruisers] set Id=20 where [ship name] like 'Alexander Nevsky'
+update [Light Cruisers] set Id=21 where [ship name] like 'Hermelin'
+update [Light Cruisers] set Id=22 where [ship name] like 'Dresden'
+update [Light Cruisers] set Id=23 where [ship name] like 'Kolberg'
+update [Light Cruisers] set Id=24 where [ship name] like 'Karlsruhe'
+update [Light Cruisers] set Id=25 where [ship name] like 'Konigsberg'
+update [Light Cruisers] set Id=26 where [ship name] like 'Nurnberg'
+update [Light Cruisers] set Id=27 where [ship name] like 'Yorck'
+update [Light Cruisers] set Id=28 where [ship name] like 'Admiral Hipper'
+update [Light Cruisers] set Id=29 where [ship name] like 'Roon'
+update [Light Cruisers] set Id=30 where [ship name] like 'Hindenburg'
+update [Light Cruisers] set Id=31 where [ship name] like 'Black Swan'
+update [Light Cruisers] set Id=32 where [ship name] like 'Weymouth'
+update [Light Cruisers] set Id=33 where [ship name] like 'Caldeon'
+update [Light Cruisers] set Id=34 where [ship name] like 'Danae'
+update [Light Cruisers] set Id=35 where [ship name] like 'Emerald'
+update [Light Cruisers] set Id=36 where [ship name] like 'Leander'
+update [Light Cruisers] set Id=37 where [ship name] like 'Fiji'
+update [Light Cruisers] set Id=38 where [ship name] like 'Edinburgh'
+update [Light Cruisers] set Id=39 where [ship name] like 'Neptune'
+update [Light Cruisers] set Id=40 where [ship name] like 'Minotaur'
+
+ALTER TABLE [Light Cruisers]
+ALTER COLUMN ID INT NOT NULL;
+
+ALTER TABLE [Light Cruisers]
+ADD PRIMARY KEY ([Id]);
+
+-------------------------------------------------------------------------------------------------------------------------------
 
 DROP TABLE IF EXISTS Battleships
 CREATE TABLE Battleships

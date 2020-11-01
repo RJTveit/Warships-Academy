@@ -19,10 +19,20 @@ namespace WorldOfWarshipsAcademy.Controllers
         }
 
         // GET: LightCruisers
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var worldOfWarshipsDbContext = _context.LightCruisers.Include(l => l.AbbrevNavigation).Include(l => l.NationNavigation);
-            return View(await worldOfWarshipsDbContext.ToListAsync());
+            //var worldOfWarshipsDbContext = _context.LightCruisers.Include(l => l.AbbrevNavigation).Include(l => l.NationNavigation);
+            //return View(await worldOfWarshipsDbContext.ToListAsync());
+
+            var lCruisers = from cl in _context.LightCruisers
+                            select cl;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                lCruisers = lCruisers.Where(s => s.ShipName.Contains(searchString));
+            }
+
+            return View(await lCruisers.ToListAsync());
         }
 
         // GET: LightCruisers/Details/5
