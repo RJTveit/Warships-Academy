@@ -50,9 +50,9 @@ The Concept is to provide the player base a quick reference guide, to allow user
 T.1.1 | 1.0.1 | Nations and Class links displayed | Complete | 10/28/2020
 T.1.2 | 1.0.2 | Navigate using Class and Nation links | Complete | 10/28/2020
 T.1.3 | 1.0.3 | View table data sorted by tier | Complete | 10/28/2020
-T.2.1 | 2.0.1 | Searching application using search bar | Incomplete |    |
+T.2.1 | 2.0.1 | Searching application using search bar | Partially Complete | 10/31/2020 |
 T.2.2 | 2.0.2 | Search Bar returns error message | Incomplete |     |
-T.2.3 | 2.0.3 | Search results filtered by most relevant | Incomplete |    |
+T.2.3 | 2.0.3 | Search results filtered by most relevant | Complete | 10/31/2020 |
 T.3.1 | 3.0.1 | User able to view more in-depth data by selecting "Details" | Partially complete | 10/29/2020 |
 T.3.2 | 3.0.2 | User able to create virtual "build" | Incomplete |    |
 T.4.1 | 4.0.1 | Users able to view captains skills | Incomplete |    |
