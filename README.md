@@ -10,7 +10,7 @@
 - [ ] User Stories
 - [ ] Use Case Diagram
 - [x] Requirements
-- [x] [Test Cases](Test Cases)
+- [x] [Test Cases](#TestCases)
 
 ## Concept
 [(back to top)](#table-of-contents)
