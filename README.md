@@ -60,7 +60,7 @@ The Concept is to provide the player base a quick reference guide, to allow user
 [(back to top)](#table-of-contents)
 
 Current Testing status:
-> Currently 66.7% of Test Cases are passing. The incomplete tests are for features currently under construction. The upcoming sprint will focus on completion of the search bar  > and creating the "virtual build" enviroment. 
+> Currently 66.7% of Test Cases are passing. The incomplete tests are for features currently under construction. The upcoming sprint will focus on completion of the search bar and creating the "virtual build" enviroment. 
 
 | Test ID | Req. ID | Test Desc. | Test Status | Date Passed |
 ----------|---------|------------|-------------|--------------
