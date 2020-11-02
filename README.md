@@ -59,6 +59,9 @@ The Concept is to provide the player base a quick reference guide, to allow user
 ## Test Cases
 [(back to top)](#table-of-contents)
 
+Current Testing status:
+> Currently 66.7% of Test Cases are passing. The incomplete tests are for features currently under construction. The upcoming sprint will focus on completion of the search bar > > and creating the "virtual build" enviroment. 
+
 | Test ID | Req. ID | Test Desc. | Test Status | Date Passed |
 ----------|---------|------------|-------------|--------------
 T.1.1 | 1.0.1 | Nations and Class links displayed | Complete | 10/28/2020
