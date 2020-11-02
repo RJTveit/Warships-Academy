@@ -10,7 +10,7 @@
 - [ ] User Stories
 - [ ] Use Case Diagram
 - [x] Requirements
-- [x] [Test Cases](#TestCases)
+- [x] Test Cases
 
 ## Concept
 [(back to top)](#table-of-contents)
@@ -56,7 +56,7 @@ The Concept is to provide the player base a quick reference guide, to allow user
 3.0.2 | User shall be able to create a "build" by adding on ship specific equipment allowing them to view potential in-game stat changes. | T.3.2 |
 4.0.1 | User shall be able to view captain skills and their descriptions in a seperate table. | T.4.1 |
 
-## [Test Cases](#TestCases)
+## Test Cases
 [(back to top)](#table-of-contents)
 
 Current Testing status:
