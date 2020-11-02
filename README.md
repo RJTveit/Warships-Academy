@@ -26,7 +26,7 @@ The Concept is to provide the player base a quick reference guide, to allow user
 [(back to top)](#table-of-contents)
 
 
-### Database Draft * https://github.com/RJTveit/Warships-Academy/blob/master/WorldOfWarshipsDb(DRAFT).sql
+![Database Script](https://github.com/RJTveit/Warships-Academy/blob/master/WorldOfWarshipsDb(DRAFT).sql)
 
 ## UI/UX Design
 [(back to top)](#table-of-contents)
