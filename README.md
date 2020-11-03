@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [x] Concept
-- [x] Conception Presentation
+- [ ] Conception Presentation
 - [ ] Database Concept Design
 - [x] Database Draft
 - [x] UI/UX Design
