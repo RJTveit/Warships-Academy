@@ -33,9 +33,11 @@ The Concept is to provide the player base a quick reference guide, to allow user
 
 ### Homepage ![homepage](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademyHomepage.png?raw=true)
 
+### Split Line Page ![splitchoice](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademySplitMenu.png?raw=true)
+
 ### Ship Display Page ![display](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademyShipPage.png?raw=true)
 
-### Split Line Page ![splitchoice](https://github.com/RJTveit/Warships-Academy/blob/master/UI%20Design/WoWsAcademySplitMenu.png?raw=true)
+
 
 ## User Stories
 
