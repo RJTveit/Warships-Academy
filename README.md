@@ -11,6 +11,7 @@
 - [ ] Use Case Diagram
 - [x] Requirements
 - [x] Test Cases
+- [ ] Final Review
 
 ## Concept
 [(back to top)](#table-of-contents)
@@ -76,3 +77,23 @@ T.3.1 | 3.0.1 | User able to view more in-depth data by selecting "Details" | Pa
 T.3.2 | 3.0.2 | User able to create virtual "build" | Incomplete |    |
 T.4.1 | 4.0.1 | Users able to view captains skills | Incomplete |    |
 
+Alt-H2 Project Review
+[(back to top)](#table-of-contents)
+
+
+Alt-H3 Project Experience
+-----------
+
+> The development lifecycle and supporting documentation can be found above.
+
+Alt-H3 Lessons Learned
+----------
+
+### What went right
+> After restarting my project in week 16, I was able to successfully create a database and connect to it within Visual Studio. After some initial setbacks with help from the instrcuctor I was able to scaffold the MVC components and begin building the application. 
+
+### What went wrong
+> After generating the database the foreign and primary keys did not transfer correctly, this led to problems when trying to query specific rows. 
+
+### What would you change
+> As stated above, I changed my project in week 16 back to my original idea after gaining a better understanding of the development tools and programming language. At this point all I would change would be sticking with my original idea so that I had enough time to complete more of the listed requirements.
