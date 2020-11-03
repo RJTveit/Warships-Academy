@@ -2,16 +2,16 @@
 
 ## Table of Contents
 
-- [x] Concept
-- [ ] Conception Presentation
-- [ ] Database Concept Design
-- [x] Database Draft
-- [x] UI/UX Design
-- [ ] User Stories
-- [ ] Use Case Diagram
-- [x] Requirements
-- [x] Test Cases
-- [ ] [(Project Review)](#Project-Review)
+- [x] [Concept](#Concept)
+- [ ] [Conception Presentation](#Conception-Presentation)
+- [ ] [Database Concept Design](#Database-Concept-Design)
+- [x] [Database Draft](#Database-Draft)
+- [x] [UI/UX Design](#UI/UX-Design)
+- [ ] [User Stories](#User-Stories)
+- [ ] [Use Case Diagram](#Use-Case-Diagram)
+- [x] [Requirements](#Requirements)
+- [x] [Test Cases](#Test-Cases)
+- [ ] [Project Review](#Project-Review)
 
 ## Concept
 [(back to top)](#table-of-contents)
