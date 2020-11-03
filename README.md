@@ -11,7 +11,7 @@
 - [ ] Use Case Diagram
 - [x] Requirements
 - [x] Test Cases
-- [ ] Final Review
+- [ ] Project Review
 
 ## Concept
 [(back to top)](#table-of-contents)
@@ -77,16 +77,16 @@ T.3.1 | 3.0.1 | User able to view more in-depth data by selecting "Details" | Pa
 T.3.2 | 3.0.2 | User able to create virtual "build" | Incomplete |    |
 T.4.1 | 4.0.1 | Users able to view captains skills | Incomplete |    |
 
-Alt-H2 Project Review
+## Project Review
 [(back to top)](#table-of-contents)
 
 
-Alt-H3 Project Experience
+H3 Project Experience
 -----------
 
 > The development lifecycle and supporting documentation can be found above.
 
-Alt-H3 Lessons Learned
+H3 Lessons Learned
 ----------
 
 ### What went right
