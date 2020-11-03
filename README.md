@@ -81,12 +81,12 @@ T.4.1 | 4.0.1 | Users able to view captains skills | Incomplete |    |
 [(back to top)](#table-of-contents)
 
 
-H3 Project Experience
+Project Experience
 -----------
 
 > The development lifecycle and supporting documentation can be found above.
 
-H3 Lessons Learned
+Lessons Learned
 ----------
 
 ### What went right
